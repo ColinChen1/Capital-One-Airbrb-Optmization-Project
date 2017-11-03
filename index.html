@@ -46,102 +46,63 @@
 						<center><p id="wordcloudtext">This Wordcloud was created from the 15 most frequent words pulled directly from 'reviews.csv'.
 						The intention was to showcase a trend in positive or negative reviews by words such as "great" or "horrible".
 						An unforeseen side effect were the abundance of conjunctions like "and" and "but" (Also refresh the page - it's quite cool). </p></center>
-						<center><p id="wordcloudtext">After ignoring all conjunctions and pronouns...</p></center>
+						<center><p id="wordcloudtext"> (2) Wordcloud of Most Frequent Words in Airbnb Reviews without Conjunctions and Pronouns</p></center>
 						<br>
 						<center><div id="wordcloud1" ></div></center>
 						<center><p id="wordcloudtext">Now we can clearly see the types of reviews for Airbnb - all positive, no negative words. 
 						Perhaps all the reviews that are publically shown are positive ones. </p></center>
+						<center><p id="wordcloudtext">(3) Wordcloud of Most Frequent Words in Airbnb Summaries of Houses</p></center>
+						<center><div id="wordcloud2"></div></center>
+						<center><p id="wordcloudtext">This wordcloud is from the summaries of the houses. Rather than only getting 15 words, I decided to get all the words.  It turns out they use "San Francisco" alot, but there's also some positive words scattered around though.</p></center>
 					</div>
 				</header>
 				<div class="content dark style1 featured">
 					<div class="container">
 						<div class="row">
-							<div class="4u 12u(narrow)">
-								<section>
-									<span class="feature-icon"><span class="icon fa-clock-o"></span></span>
-									<header>
-										<h3>Gravida</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="4u 12u(narrow)">
-								<section>
-									<span class="feature-icon"><span class="icon fa-bolt"></span></span>
-									<header>
-										<h3>Vivamus</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="4u 12u(narrow)">
-								<section>
-									<span class="feature-icon"><span class="icon fa-cloud"></span></span>
-									<header>
-										<h3>Accumsan</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
-								<footer>
-									<a href="#second" class="button scrolly">Gravida tempor lacinia</a>
-								</footer>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-		<!-- Second -->
+		<!-- Second Problem - Price Retriever-->
 			<section id="second" class="main">
 				<header>
 					<div class="container">
-						<h2>Euismod sed feugiat lorem tempus magna</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+						<h2>Estimating Prices</h2>
+						<p>Given Latitude and Longitude, we can estimate the price of the average house in that location.</p>
+						<br>
+						<form method="post">
+							<center><div style="width:82%" class="row 50%">
+								<div class="4u 12u(narrow)">
+									<input type="number" name="latInput" id="latInput" value="" placeholder="Latitude (Ex. 37.5324)"  step = "0.001" min = "37.7" max = "37.9"/>
+								</div>
+								<div class="4u 12u(narrow)">
+									<input type="number" name="name" id="lonInput" value="" placeholder="Longitude (Ex. -122.3453)" step = "0.001" min = "-122.6" max = "-122.3"  />
+								</div>
+								<div class="4u 12u(narrow)">
+									<input type="number" name="priceOutput" id="priceOutput" value="" placeholder="Price (Ex. $1.00)" disabled="disabled" />
+								</div>
+							</div>
+							<br>
+							<div>
+								<div class="12u">
+									<ul class="actions">
+										<li><input class="button" value="Find Price" onclick="getLatLon()" /></li>
+									</ul>
+								</div>
+							</div> </center> 
+						</form>
 					</div>
 				</header>
 				<div class="content dark style2">
 					<div class="container">
+						<div class="row"></div>
 						<div class="row">
-							<div class="4u 12u(narrow)">
-								<section>
-									<h3>Augue vivamus sed ipsum commodo lorem dolor</h3>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-									tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-									vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-									augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-									lorem ipsum dolor placerat magna tempus feugiat.</p>
-									<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-									euismod lorem ipsum dolor.</p>
-									<footer>
-										<a href="#third" class="button scrolly">Accumsan nisi tempor</a>
-									</footer>
-								</section>
-							</div>
-							<div class="8u 12u(narrow)">
-								<div class="row">
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
-								</div>
-							</div>
+							<div class="12u"></div>
 						</div>
 					</div>
 				</div>
@@ -151,9 +112,8 @@
 			<section id="third" class="main">
 				<header>
 					<div class="container">
-						<h2>Ornare varius lorem ipsum ante lectus</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+						<h2>Estimating Prices</h2>
+						<p>[Filler for estimating prices based on location]</p>
 					</div>
 				</header>
 				<div class="content dark style3">
@@ -328,49 +288,7 @@
 							</div>
 						</section>
 						<section>
-							<header>
-								<h3>Form</h3>
-							</header>
-							<form method="post" action="#">
-								<div class="row 50%">
-									<div class="6u 12u(narrow)">
-										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
-									</div>
-									<div class="6u 12u(narrow)">
-										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<div class="select" tabindex="-1">
-											<select name="department" id="department">
-												<option value="">Choose a department</option>
-												<option value="1">Manufacturing</option>
-												<option value="2">Administration</option>
-												<option value="3">Support</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
-									</div>
-								</div>
-								<div class="row">
-									<div class="12u">
-										<ul class="actions">
-											<li><input type="submit" class="button" value="Send Message" /></li>
-											<li><input type="reset" class="button alt" value="Clear Form" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
+
 						</section>
 					</div>
 				</div>
@@ -400,6 +318,9 @@
 			<script src="assets/bower_components/jqcloud2/dist/jqcloud.min.js"></script> 
 			<link rel="stylesheet" href="assets/bower_components/jqcloud2/dist/jqcloud.min.css">
 			<script src="assets/js/wordcloud.js"></script>
+			<script src="assets/js/priceestimation.js"></script>
+			<script src="assets/js/require.js"></script>
+
 
 
 	</body>
