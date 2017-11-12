@@ -78,10 +78,10 @@
 						<form method="post">
 							<center><div style="width:82%" class="row 50%">
 								<div class="4u 12u(narrow)">
-									<input type="number" name="latInput" id="latInput" value="" placeholder="Latitude (Ex. 37.5324)"  step = "0.001" min = "37.7" max = "37.9"/>
+									<input type="number" name="latInput" id="latInput" value="" placeholder="Latitude (Ex. 37.7555)"  step = "0.001" min = "37.7" max = "37.85"/>
 								</div>
 								<div class="4u 12u(narrow)">
-									<input type="number" name="name" id="lonInput" value="" placeholder="Longitude (Ex. -122.3453)" step = "0.001" min = "-122.6" max = "-122.3"  />
+									<input type="number" name="name" id="lonInput" value="" placeholder="Longitude (Ex. -122.3933)" step = "0.001" min = "-122.512" max = "-122.36"  />
 								</div>
 								<div class="4u 12u(narrow)">
 									<input type="number" name="priceOutput" id="priceOutput" value="" placeholder="Price (Ex. $1.00)" disabled="disabled" />
@@ -91,7 +91,7 @@
 							<div>
 								<div class="12u">
 									<ul class="actions">
-										<li><input class="button" value="Find Price" onclick="getLatLon()" /></li>
+										<li><input class="button" value="Find Weekly Income" onclick="getLatLon()" /></li>
 									</ul>
 								</div>
 							</div> </center> 
@@ -112,188 +112,38 @@
 			<section id="third" class="main">
 				<header>
 					<div class="container">
-						<h2>Estimating Prices</h2>
-						<p>[Filler for estimating prices based on location]</p>
+						<h2>Optimizing Booking Prices</h2>
+						<p>Given Latitude and Longitude of a property, we can estimate the  ideal price per night that will yield maximum bookings or revenue. </p>
+						<br>
+						<form method="post">
+							<center><div style="width:82%" class="row 50%">
+								<div class="4u 12u(narrow)">
+									<input type="number" name="latInput" id="latInput2" value="" placeholder="Latitude (Ex. 37.7555)"  step = "0.001" min = "37.7" max = "37.85"/>
+								</div>
+								<div class="4u 12u(narrow)">
+									<input type="number" name="name" id="lonInput2" value="" placeholder="Longitude (Ex. -122.3933)" step = "0.001" min = "-122.512" max = "-122.36"  />
+								</div>
+								<div class="4u 12u(narrow)">
+									<input type="number" name="priceOutput" id="priceOutput2" value="" placeholder="Price (Ex. $1.00)" disabled="disabled" />
+								</div>
+							</div>
+							<br>
+							<div>
+								<div class="12u">
+									<ul class="actions">
+										<li><input class="button" value="Find Optimal Price" onclick="getLatLonDaily()" /></li>
+									</ul>
+								</div>
+							</div> </center> 
+						</form>
 					</div>
 				</header>
+
 				<div class="content dark style3">
 					<div class="container">
-						<span class="image featured"><img src="images/pic07.jpg" alt="" /></span>
-						<div class="row">
-							<div class="4u 12u(narrow)">
-								<h3>Diam vivamus turpis lorem sodales lectus ornare</h3>
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-								euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu eget ornare varius
-								gravida dolore euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu
-								eget ornare et magna.</p>
-							</div>
-							<div class="4u 12u(narrow)">
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-								euismod lorem ipsum dolor sit amet consequat eget ornare varius gravida euismod.
-								Gravida dis lorem ipsum dolor placerat magna tempus feugiat magna tempus lorem.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia.</p>
-							</div>
-							<div class="4u 12u(narrow)">
-								<p>Placerat lectus ante vel nunc euismod est turpis sodales. Diam tempor dui
-								lacinia eget ornare varius gravida. Gravida dis placerat lectus ante vel nunc
-								euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus augue
-								cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat. Lectus ante vel nunc euismod
-								est turpis sodales. Diam tempor dui lacinia dolore.</p>
-								<p>Accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida
-								dolore euismod lorem ipsum dolor sit amet conseismod lorem ipsum dolor sit amet
-								consequat lorem ipsum consequat feugiat sed tempus euismod feugiat veroeros.</p>
-								<footer>
-									<a href="#fourth" class="button scrolly">Ipsum ornare lorem dolor</a>
-								</footer>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
-
-		<!-- Basic Elements -->
-		
-			<section class="main">
-				<header>
-					<div class="container">
-						<h2>A Whole Lotta Elements</h2>
-						<p>General purpose elements for every general purpose. Or something like that.</p>
-					</div>
-				</header>
-				<div class="content style1 dark">
-					<div class="container">
-						<section>
-							<header>
-								<h3>Paragraph</h3>
-								<p>This is a byline</p>
-							</header>
-							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-							amet risus elit.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Blockquote</h3>
-							</header>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
-							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
-						</section>
-						<section>
-							<header>
-								<h3>Divider</h3>
-							</header>
-							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-							<hr />
-							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Unordered List</h3>
-							</header>
-							<ul class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ul>
-						</section>
-						<section>
-							<header>
-								<h3>Ordered List</h3>
-							</header>
-							<ol class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ol>
-						</section>
-						<section>
-							<header>
-								<h3>Table</h3>
-							</header>
-							<div class="table-wrapper">
-								<table class="default">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>00001</td>
-											<td>Lorem ipsum dolor</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00002</td>
-											<td>Sit amet nullam</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00003</td>
-											<td>Feugiat felis viverra</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00004</td>
-											<td>Sagittis enim felis</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00005</td>
-											<td>Nullam sed vestibulum</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-						<section>
-
-						</section>
-					</div>
-				</div>
-			</section>
-	
 
 		<!-- Footer -->
 			<section id="footer">
